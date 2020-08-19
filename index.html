@@ -5,13 +5,17 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <script>
+      window.addEventListener('message', event => {
+        console.log(event.data); 
+        document.getElementById("id-test").innerHTML = event.data;
+      }); 
+    </script>
+    
     <div id="test">
       <h1>Hello from iFrame</h1>
       <p>User id from parent DOM: <span id="id-test"></span></p>
     </div>
-    <script>
-      var userId = parent.document.getElementsByTagName('body')[0].getAttribute('data-user-id');
-      document.getElementById("id-test").innerHTML = userId;
-    </script>
+
   </body>
 </html>
