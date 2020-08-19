@@ -7,6 +7,11 @@
   <body>
     <div id="test">
       <h1>Hello from iFrame</h1>
+      <p>User id from parent DOM: <span id="id-test"></span></p>
     </div>
+    <script>
+      var userId = parent.document.getElementsByTagName('body')[0].getAttribute('data-user-id');
+      document.getElementById("id-test").innerHTML = userId;
+    </script>
   </body>
 </html>
