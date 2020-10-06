@@ -8,7 +8,7 @@
     <script>
       window.addEventListener('message', event => {
         console.log(event.data); 
-        document.getElementById("id-test").innerHTML = event.data;
+        document.getElementById("id-test").innerHTML = event.data.data.howspaceUserId;
       }); 
     </script>
     
